@@ -1,4 +1,62 @@
+
+import Creator from './Creator';
+
+console.log("Logging creator: " + Creator);
+
+let appPrefix = 'p';
+let componentName = 'engine';
+let htmlElName = appPrefix + '-' + componentName;
+
+var Engine = document.registerElement(htmlElName);
+
+//document.body.appendChild(new Engine());
+
+let pQueryEl = function(htmlElName){
+    return document.querySelectorAll(htmlElName)
+};
+
+var elements = pQueryEl(htmlElName);
+var scope = {};
+
+console.log('Elements: ', elements);
+
+elements.forEach(function(element) {
+    element.innerHTML = '<p>Ciao, ho sostituito l\'HTML con un template</p>';
+});
+
+
+/*
+
 (function() {
+
+    //var Creator = require('./Creator.js');
+
+    import Creator from 'Creator';
+    console.log(Creator);
+
+    let appPrefix = 'p';
+    let componentName = 'engine';
+    let htmlElName = appPrefix + '-' + componentName;
+
+    var Engine = document.registerElement(htmlElName);
+
+    //document.body.appendChild(new Engine());
+
+    let pQueryEl = function(htmlElName){
+        return document.querySelectorAll(htmlElName)
+    };
+
+    var elements = pQueryEl(htmlElName);
+    var scope = {};
+
+    console.log('Elements: ', elements);
+
+    elements.forEach(function(element) {
+        element.innerHTML = '<p>Ciao, ho sostituito l\'HTML con un template</p>';
+    });
+
+/*
+
     var elements = document.querySelectorAll('[data-tw-bind]'),
         scope = {};
     elements.forEach(function(element) {
@@ -55,4 +113,6 @@
     changeSurnameByCode = function() {
         scope.surname = 'surname Changed by Code';
     }
+*
 })();
+*/
