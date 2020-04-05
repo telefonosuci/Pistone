@@ -1,7 +1,22 @@
 
-import Creator from './Creator';
+//import Creator  from './pistone/Creator.js';
+import  MyComponent  from './my-component/MyComponent.js';
 
-console.log("Logging creator: " + Creator);
+
+
+
+
+let component = new MyComponent('engine');
+
+
+
+
+
+/*console.log("Logging creator: " + Creator);
+
+let ce = new CustomHead();
+ce.pushMe();
+ce.push();
 
 let appPrefix = 'p';
 let componentName = 'engine';
@@ -23,6 +38,7 @@ console.log('Elements: ', elements);
 elements.forEach(function(element) {
     element.innerHTML = '<p>Ciao, ho sostituito l\'HTML con un template</p>';
 });
+*/
 
 
 /*

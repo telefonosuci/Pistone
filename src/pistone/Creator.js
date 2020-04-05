@@ -1,4 +1,4 @@
-class Creator {
+export default class Creator {
 
     constructor (name) {
         this.name = name;
@@ -12,4 +12,3 @@ class Creator {
 
 }
 
-export default Creator;
